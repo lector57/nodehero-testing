@@ -1,0 +1,14 @@
+name: web 
+on:
+  push:
+    branches:
+    - main
+    - release/*
+jobs: 
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: action/checkout@v3
+      - name: Install deps
+        run: npm install
